@@ -1,0 +1,152 @@
+
+  
+  /* الحاوية الرئيسية للمحتوى بعد الشريط الجانبي */
+  .server-manage-content {
+    margin-left: 300px; /* قللنا المسافة الأفقية من 370 إلى 300 */
+    margin-top: 7rem;   /* قللنا المسافة العلوية من 6rem إلى 4rem */
+    padding: 15px 20px; /* قللنا الـ padding من 20px 30px */
+  }
+  
+  /* بطاقات معلومات السيرفر */
+  .info-cards {
+    display: flex;
+    flex-wrap: wrap;     /* تنتقل البطاقات لسطر جديد إذا ضاق العرض */
+    gap: 0.75rem;        /* قللنا المسافة بين البطاقات من 1rem إلى 0.75rem */
+    margin-top: 1rem;    /* مسافة علوية */
+    margin-bottom: 1rem; /* مسافة سفلية */
+  }
+  
+  .info-card {
+    background-color: var(--card-background);
+    padding: 1rem;             /* قللنا الـ padding من 1.5rem إلى 1rem */
+    border-radius: 6px;        /* قللنا الانحناء من 8px إلى 6px */
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 0.9rem;         /* تصغير حجم الخط داخل البطاقة */
+  }
+  
+  /* الحاوية الرئيسية (BOT PROFILE) */
+  .bot-profile-container {
+    background-color: var(--card-background);
+    border-radius: 6px;  /* تقليل انحناء الزوايا */
+    padding: 1.5rem;     /* تقليل الـ padding من 2rem */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 1.5rem;  /* تقليل المسافة الفاصلة من 2rem */
+  }
+  
+  .bot-profile-container h2 {
+    margin-bottom: 0.75rem; /* تقليل المسافة السفلية للعنوان */
+  }
+  
+  /* تقسيم قسم البروفايل: أفاتار ومعلومات */
+  .profile-section {
+    display: flex;
+    align-items: flex-start; 
+    gap: 1rem; /* تقليل المسافة بين الأفاتار والمعلومات */
+  }
+  
+  /* صورة الأفاتار */
+  .profile-avatar img {
+    width: 80px;   /* تصغير من 100px */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* معلومات البوت */
+  .profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* تقليل المسافة بين العناصر الداخلية */
+  }
+  
+  .profile-info label {
+    font-weight: 500;
+    margin-bottom: 0.15rem; /* تصغير المسافة تحت الليبل */
+  }
+  
+  .profile-info input,
+  .profile-info select {
+    padding: 0.4rem; /* تصغير الـ padding من 0.5rem */
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 0.9rem; /* تصغير الخط */
+  }
+  
+  /* زر الحفظ */
+  .save-btn {
+    margin-top: 0.75rem; /* تصغير المسافة العلوية */
+    padding: 0.5rem 1rem; /* تصغير حجم الزر */
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem; /* تصغير الخط */
+  }
+  
+  .save-btn:hover {
+    background-color: #3a76d3;
+  }
+  
+
+
+
+
+  /* التنسيق الأساسي للشاشات المتوسطة والكبيرة (كما هو) */
+
+/* عند وصول الشاشة لعرض 768px أو أقل، نغيّر بعض القيم */
+@media (max-width: 768px) {
+    .server-manage-content {
+      /* أزلنا الهامش من اليسار كي يصبح المحتوى بعرض الشاشة */
+      margin-left: 0;
+      /* تقليل المسافة العلوية */
+      margin-top: 4rem;
+      /* يمكنك تقليل الـ padding أيضاً */
+      padding: 10px 15px;
+    }
+  
+    /* في الشاشات الصغيرة، قد تحتاج لتكبير المسافة بين الكروت قليلاً
+       أو تركها كما هي، حسب التصميم */
+    .info-cards {
+      gap: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .info-card {
+      /* نجعل الكارت يأخذ العرض الكامل تقريبا لتسهيل القراءة على الأجهزة الصغيرة */
+      flex: 1 1 100%;
+      padding: 1rem;
+    }
+  
+    /* في حال لديك Sidebar عائم أو ثابت، قد ترغب في إخفائه أو جعله قابل للطي */
+    /*
+    .sidebar {
+      display: none; // كمثال لإخفاءه على الشاشات الصغيرة
+    }
+    */
+  }
+  
+  /* عند وصول الشاشة لعرض أصغر مثلاً 480px أو 576px، يمكنك ضبط قيم أخرى */
+  @media (max-width: 576px) {
+    .server-manage-content {
+      margin-top: 5rem;
+      padding: 8px 10px;
+    }
+  
+    .info-card {
+      font-size: 0.85rem; /* تصغير الخط أكثر إذا أردت */
+    }
+  
+    /* يمكنك أيضاً تصغير حجم الأفاتار */
+    .profile-avatar img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  

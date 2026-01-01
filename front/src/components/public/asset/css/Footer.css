@@ -1,0 +1,79 @@
+/* الفوتر العام */
+.footer {
+    background: rgba(8, 12, 20, 0.8);
+    color: #eee;
+    padding: 40px 20px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 100%;  
+    margin: 0 auto;    
+}
+
+  
+  /* عند تفعيل الفئة fade-in يظهر الفوتر */
+  .footer.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* القسم العلوي من الفوتر */
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* الشعار */
+  .footer-logo img {
+    width: 150px;
+  }
+  
+  /* روابط التنقل */
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* روابط التواصل الاجتماعي */
+  .footer-social a {
+    color: #eee;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-social a:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* القسم السفلي من الفوتر */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  

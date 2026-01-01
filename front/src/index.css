@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #0d1926;
+    --secondary-color: #4d8bf3;
+    --background-color: #142230;
+    --card-background: #1a2633;
+    --text-color: #d1e5ff;
+    --accent-color: rgb(153 161 167 / 50%);
+    --hover-header: #66c2ff;
+  }
+  
+  body {
+    background: linear-gradient(135deg, 
+      var(--primary-color) 0%, 
+      var(--background-color) 60%, 
+      var(--card-background) 100%
+    );
+    color: var(--text-color);
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.334em;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .language-transition {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+  
+  .language-transition.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  button {
+    all: unset;
+  }
+  

@@ -1,0 +1,330 @@
+.home-container {
+    position: relative;
+    margin-top: 0; 
+    min-height: calc(50vh); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+  
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.home_top_1 {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 60px 40px;
+    border-radius: 12px;
+}
+
+.home_top_h1 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    word-spacing: 0.3rem; 
+    line-height: 1.2;    
+}
+
+
+.home_top_p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+.home_top_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.home_top_buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home_invite {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.home_invite:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.home_dashboard {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.home_dashboard:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* القسم الأساسي */
+.partners-section {
+    background-color: var(--primary-color); 
+    padding: 40px;
+    text-align: center;
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  /* عنوان القسم */
+  .partners-heading h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .partners-marquee {
+    width: 50%;
+    margin: 0 auto;     
+    overflow: hidden;    
+    position: relative;
+  }
+  
+  
+  /* قائمة الشركاء */
+  .partners-list {
+    display: flex;
+    gap: 20px;
+    animation: scrollPartners 20s linear infinite;
+  }
+  
+  @keyframes scrollPartners {
+    0% {
+      transform: translateX(100%); 
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
+  .partner-card {
+    background-color: rgba(85, 84, 84, 0.9); 
+    border: 1px solid #1b1d1e; 
+    border-radius: 8px;
+    width: 200px; 
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .partner-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .partner-name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .partner-members {
+    font-size: 0.9rem;
+    color: #b9bbbe; 
+  }
+  
+/* الحاوية العامة للسكلتون */
+.partners-skeleton {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+  }
+  
+  /* كارت السكلتون */
+  .skeleton-card {
+    width: 300px;
+    height: 180px;
+    background: rgba(85, 84, 84, 0.9);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  
+  .skeleton-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .skeleton-icon {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+  }
+  
+  .skeleton-lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .skeleton-line {
+    width: 100%;
+    height: 10px;
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .skeleton-line.short {
+    width: 70%;
+  }
+  
+  /* تأثير التموج (Shimmer) */
+  .skeleton-card::after,
+  .skeleton-banner::after,
+  .skeleton-icon::after,
+  .skeleton-line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(450px);
+    }
+  }
+  
+  /* ========================= */
+  /*    Media Query للسكلتون   */
+  /* ========================= */
+  @media (max-width: 600px) {
+    .partners-skeleton {
+      flex-wrap: nowrap;
+    }
+    .skeleton-card:nth-child(n+2) {
+      display: none;
+    }
+    .skeleton-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
+
+
+
+
+
+
+
+  /* قسم الميزات */
+.features-section {
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.features-heading h2 {
+  font-size: 2.8rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.features-heading p {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+}
+
+/* قائمة البطاقات */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* بطاقة الميزة */
+.feature-card {
+  background-color: rgba(85, 84, 84, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+/* أيقونة الميزة */
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* عنوان الميزة */
+.feature-title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* وصف الميزة */
+.feature-description {
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+  
